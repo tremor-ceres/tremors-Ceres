@@ -5,8 +5,35 @@
     <title>Title</title>
 </head>
 <body>
+
+
 https://java.codeup.com/extra-exercises/javascript/arrays/
 
+<script>
+    (function() {
+//BEVERLY DID THIS BONUS!!!!**********************************************************
+// <!--//-->
+// <!--// Write a function, filterNumbers() that takes in an array of mixed data types-->
+// <!--// and returns an array of only the numbers type in ascencding order.-->
+
+var mixedData = ["dog" , '10', "frog", 5 , 34];
+console.log(mixedData);
+var numbers = [];
+function filterNumbers(array) {
+mixedData.forEach(function (data) {
+if (!isNaN(data)) {
+numbers.push(parseFloat(data));
+} else {
+console.log("not a number")
+}
+return numbers.sort((a, b) => a - b)
+});
+}
+filterNumbers();
+console.log(numbers);
+
+    })();
+</script>
 
 </body>
 </html>
