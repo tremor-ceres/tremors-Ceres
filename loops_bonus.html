@@ -5,16 +5,42 @@
     <title>Title</title>
 </head>
 <body>
-<!--1. According to Wikipedia a happy number is defined by the following process :-->
-<!--"Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers (or sad numbers)".-->
-<!--Write a JavaScript program to find and print the first 5 happy numbers.-->
-<!--2. Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen.-->
-<!--Sample Output :-->
-<!--"0 is even"-->
-<!--"1 is odd"-->
-<!--"2 is even"-->
-<!--3. Write a JavaScript conditional statement to sort three numbers. Display an alert box to show the result.-->
-<!--Sample numbers : 0, -1, 4-->
-<!--Output : 4, 0, -1-->
+<script>
+    (function(){
+        "use strict";
+
+        <!--1. According to Wikipedia a happy number is defined by the following process :-->
+        <!--"Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers (or sad numbers)".-->
+        <!--Write a JavaScript program to find and print the first 5 happy numbers.-->
+        <!--2. Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen.-->
+        <!--Sample Output :-->
+        <!--"0 is even"-->
+        <!--"1 is odd"-->
+        <!--"2 is even"-->
+
+
+        // BEVERLY IS WORKING # 3
+
+        <!--3. Write a JavaScript conditional statement to sort three numbers. Display an alert box to show the result.-->
+        <!--Sample numbers : 0, -1, 4-->
+        <!--Output : 4, 0, -1-->
+
+
+        var Arr = [0, -1, 4];
+
+        for (var i = -1; i < Arr.length; i++)
+            for (var j = 0; j < i; j++)
+                if (Arr[i] < Arr[j]) {
+                    var x = Arr[i];
+                    Arr[i] = Arr[j];
+                    Arr[j] = x;
+
+                }
+
+        console.log(Arr);
+    })();
+
+</script>
+
 </body>
 </html>
