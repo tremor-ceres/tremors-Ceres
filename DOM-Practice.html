@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+    <title>Title</title>
+</head>
+<body>
+<p>1.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam animi, assumenda culpa eos excepturi facere,
+    hic, incidunt laudantium nam nesciunt obcaecati quam quasi sapiente sit soluta tempore vel voluptatem?</p>
+
+
+<p>2.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam animi, assumenda culpa eos excepturi facere,
+    hic, incidunt laudantium nam nesciunt obcaecati quam quasi sapiente sit soluta tempore vel voluptatem?</p>
+
+<ol>
+    <li>one</li>
+    <li id="two">two</li>
+    <li>three</li>
+    <li>four</li>
+    <li>five</li>
+</ol>
+
+<div>
+    <h1>hello</h1>
+    <ul>
+        <li>uno</li>
+        <li id="dos">dos</li>
+        <li>tres</li>
+    </ul>
+</div>
+
+
+
+
+
+
+<script>
+
+    $("p").first().click(function(){
+        $(this).hide();
+    });
+
+
+    $('h1').dblclick(function () {
+        $('li').css('background', 'orange');
+    });
+
+    $('ol').children().last().click(function () {
+        $(this).html('you clicked me');
+    });
+
+
+
+    $('#dos').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        }
+    );
+
+</script>
+
+</body>
+</html>
