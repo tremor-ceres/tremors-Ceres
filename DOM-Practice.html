@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+
     <script
             src="https://code.jquery.com/jquery-2.2.4.js"
             integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
             crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+<!--    <script-->
+<!--            src="https://code.jquery.com/jquery-2.2.4.js"-->
+<!--            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
+<!--            crossorigin="anonymous"></script>-->
     <title>Title</title>
 </head>
 <body>
@@ -21,7 +29,7 @@
     <li id="two">two</li>
     <li>three</li>
     <li>four</li>
-    <li>five</li>
+    <li>Click here</li>
 </ol>
 
 <div>
@@ -54,7 +62,6 @@
     });
 
 
-
     $('#dos').hover(
         function() {
             $(this).css('color', 'red');
@@ -66,5 +73,232 @@
 
 </script>
 
+
+<main>
+
+    <article>
+        <h3 id="change-bg-color">Top Bonds</h3>
+        <section>Beginning</section>
+        <hr>
+        <section>Middle</section>
+        <hr>
+        <section id="append-to-ul">End</section>
+        <hr>
+        <section>
+
+            <ul id="append-to-me">
+                <li >Craig</li>
+                <li>Brosnan</li>
+                <li>Connery</li>
+                <li>Dalton</li>
+                <li>Moore</li>
+            </ul>
+
+        </section>
+
+    </article>
+
+    <article>
+        <h3>Top Books</h3>
+        <h3 id="message">Top Books</h3>
+        <section>Beginning</section>
+        <hr>
+        <section>Middle</section>
+        <hr>
+        <section>End</section>
+        <hr>
+        <section>
+
+            <ul id="hl-toggle">
+                <li>LOTR</li>
+                <li>1984</li>
+                <li>20,000 Legues Under the Sea</li>
+                <li>R is for Rocket</li>
+                <li>The War of the Worlds</li>
+            </ul>
+
+        </section>
+
+    </article>
+
+    <article>
+        <h3>Top Pets</h3>
+        <section id="upcase-name">Beginning</section>
+        <hr>
+        <section id="output">Middle</section>
+        <hr>
+        <section id="input">End</section>
+        <hr>
+        <section>
+
+            <ol>
+                <li>Dogs</li>
+                <li>Cats</li>
+                <li>Bats</li>
+                <li>Rats</li>
+                <li>Gnats</li>
+            </ol>
+
+        </section>
+
+    </article>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    // // +++++++++++++++++++++++++++++++++++++++++++++++++++++QUESTIONS+++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // // (For solutions to all questions, see below)
+    //
+    //
+    // // ========================= without traversal methods =========================
+    //
+    // // Highlight all sections
+    //
+    $('section').css('color', 'highlight');
+
+    //
+    // // Highlight all articles
+    //
+    $('article').css('color', 'yellow');
+    //
+    //
+    // // ========================= .first() =========================
+    //
+    // // Highlight the first article
+    //
+    $('article').first().css('color', 'green');
+    //
+    //
+    // // ========================= .last() =========================
+    //
+    // // Highlight the last article
+    //
+    $('article').last().css('color', 'orange');
+    //
+    //
+    //
+    // // ========================= .next() =========================
+    //
+    // // Highlight the second article
+    //
+    $('article').first().next().css('color', 'purple');
+    //
+    // // Highlight the third li of the entire page
+    //
+    $('li').first().next().next().css('color', 'red');
+    //
+    //
+    //
+    //
+    // // ========================= .children() =========================
+    //
+    // // Highlight the children of all the ordered lists
+    //
+    // $('ol').children().css('color', 'grey');
+    //
+    // // Highlight all the sections of the first article
+    //
+    // $('article').first().children().css('color', 'pink');
+    //
+    // // Highlight the ordered list of the first article
+    //
+    // $('article').first().children().last().children().css('background', 'blue');
+    //
+    // // $('article').first().children().last().children().css('background-color', 'yellow');
+    //
+    //
+    //
+    //
+    // // ========================= .parent() =========================
+    //
+    // // Highlight the entire ordered list when a list item is clicked
+    //
+    // $('li').click(function () {
+    //     $(this).parent().css('background', 'pink');
+    // });
+    //
+    // //DONT FORGET $$$$$$$$$$$$$$$$$$$$$$$
+    //
+    // // $('li').click(function() {
+    // //     $(this).parent().css('background-color', 'yellow');
+    // // });
+    //
+    //
+    //
+    // // ========================= .each() =========================
+    //
+    // // Highlight the first nested element inside all article elements
+    //
+    // $('article').each(function (index, element) {
+    //     $(this).children().first().css('background', 'yellow')
+    // });
+    // // $('article').each(function(index, element) {
+    // //     $(this).children().first().css('background-color', 'yellow');
+    // // });
+    //
+    // // Highlight the second list item of all ordered lists
+    //
+    // $('ol').each(function (index, element) {
+    //     $(this).children().first().next().css('background', 'indigo')
+    // });
+    //
+    //
+    // // Highlight the third list item of all ordered lists
+    //
+    // $('ol').each(function (index, element) {
+    //     $(this).children().first().next().next().css('background', 'aqua')
+    // });
+    //
+    //
+    //
+
+    // ========================= more complex combinations =========================
+
+    // Highlight the first li of the second ordered list
+    //
+
+
+    // WHY DOESNT THIS WORK????
+    // $('ol').first().next().children().first().css('background', 'orange');
+    // $('article').first().next().children().last().children().children().first().css('background-color', 'yellow');
+
+    // alert each of the top five items when double clicking on the header for a section
+
+    // $('h3').dblclick(function(){
+    //     console.log($(this).parent().children().last().children().children());
+    //     $(this).parent().children().last().children().children().each(function(index, element){
+    //         alert($(element).text());
+    //     });
+    // });
+    //
+    // // Give a azure background color to every other list item (first item should be azure)
+    //
+    // // $('li').each(function(index, element) {
+    // //     if (index % 2 !==0) {
+    // //         $(this).css('background', 'azure')
+    // //     }
+    // // })
+    //
+    // $('ol').each(function(indexI, element) {
+    //     $(element).children().each(function(indexJ) {
+    //         // console.log(indexJ);
+    //         if (indexJ % 2 == 0) {
+    //             console.log(indexJ);
+    //             $(this).css('background-color', 'azure');
+    //         }
+    //     });
+    // });
+
+</script>
 </body>
 </html>
